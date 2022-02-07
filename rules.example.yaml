@@ -1,0 +1,166 @@
+# Things I know I always want to see
+- mailbox: Important
+  mark_read: false
+  notify: true
+  match:
+    fromin:
+      - contacts
+
+
+# Send tracking emails to Shopify
+- redirect: track-xxxxxx@my.shop.app
+  name: Shopify tracker
+  match:
+    subject:
+      - Shipped
+
+    body:
+      - Track package
+
+
+
+# 2FA Codes, temporary stuff to be deleted
+- mailbox: Notifications
+  mark_read: false
+  notify: true
+  match:
+    from:
+      - Newegg Auto-Notification
+      - Taco Bell Rewards
+      - USPSInformeddelivery@email.informeddelivery.usps.com
+
+    subject:
+      - "Important Notice: Your Statement"
+      - Access from new web or mobile device
+      - Approval needed
+      - Birthday
+      - Deposit Accepted
+      - Gem pushed to rubygems.org
+      - Has been initiated
+      - ICANN Notice
+      - New Billing Statement
+      - New bank statement available
+      - Notification
+      - Now Available
+      - Paid you
+      - Reminder
+      - Statement Reminder
+      - Statement is Available
+      - Terms of Service
+      - Transcription limit almost reached
+      - Verify Email
+      - We found price drops for items you Droplisted
+      - We noticed a large transaction
+      - We’ve got a reward with your name on it
+      - Will be processed
+      - You weren't selected
+      - Your Transaction History
+      - Your statement is ready
+      - Sign in
+      - Released a new game
+      - New sign-in
+      - One-time passcode
+      - Needs your attention
+      - New Release
+      - Back in Stock
+      - Policy notice
+      - has been delivered
+      - out for delivery
+      - needs your feedback
+      - successful log-in
+      - Your Hover domain
+      - Reset your password
+      - Welcome to
+      - Update privacy
+      - Order on the way
+      - Password reset
+      - New device registration
+      - New message from
+      - Confirm email
+      - A shipment is on the way
+      - is on its way
+      - Your bill is ready to view
+
+
+
+# Receipts, notifications over email
+- mailbox: Paper Trail
+  mark_read: true
+  notify: true
+  match:
+    from:
+      - Receipts
+      - return@amazon.com
+
+    subject:
+      - Domain Registration
+      - Order confirmation
+      - Payment
+      - Receipt
+      - Thank you for activating your product on Steam!
+      - Thank you for your Steam purchase!
+      - Thanks for ordering
+      - Your Invoice
+      - Your Order
+      - Your Purchase
+      - Your has been charged
+      - Your payment has been processed
+      - We processed your payment
+      - Merchant credit/refund was issued to your account
+      - Thank you for your recent payment
+      - eReceipt
+      - Payment Request Has Been Scheduled
+      - Renewal Confirmation
+      - Your package has been delivered
+      - stream summary
+      - refund
+      - You sent $
+
+
+
+# Content over email, newsletters
+- mailbox: Newsletters
+  mark_read: false
+  notify: false
+  match:
+    to:
+      - newsletters@example.com
+
+    subject:
+      - Newsletter
+      - Project Update
+
+    from:
+      - Goodreads
+
+
+
+# Coupons, sales notifications
+- mailbox: Marketing
+  mark_read: true
+  notify: false
+  match:
+    to:
+      - marketing@example.com
+
+    from:
+      - blazinrewards
+      - Buddy's Pizza
+      - HopCat
+      - auth@jacobinmag.com
+      - chewy@woof.chewy.com
+      - microcenterinsider.com
+      - promo.newegg.com
+      - Pet Supplies Plus
+
+    subject:
+      - Steam wishlist on sale!
+
+    list:
+      # Humble bundle subscriber list
+      - <cordial.1.13.sparkpostmail.com>
+
+    header:
+      - X-campaign-version-id
+      - List-Id
+
