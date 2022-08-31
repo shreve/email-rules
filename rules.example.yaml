@@ -1,5 +1,5 @@
 # Things I know I always want to see
-- mailbox: Important
+- folder: Important
   mark_read: false
   notify: true
   match:
@@ -20,7 +20,7 @@
 
 
 # 2FA Codes, temporary stuff to be deleted
-- mailbox: Notifications
+- folder: Notifications
   mark_read: false
   notify: true
   match:
@@ -84,7 +84,7 @@
 
 
 # Receipts, notifications over email
-- mailbox: Paper Trail
+- folder: Paper Trail
   mark_read: true
   notify: true
   match:
@@ -119,7 +119,7 @@
 
 
 # Content over email, newsletters
-- mailbox: Newsletters
+- folder: Newsletters
   mark_read: false
   notify: false
   match:
@@ -136,7 +136,7 @@
 
 
 # Coupons, sales notifications
-- mailbox: Marketing
+- folder: Marketing
   mark_read: true
   notify: false
   match:
@@ -163,4 +163,3 @@
     header:
       - X-campaign-version-id
       - List-Id
-

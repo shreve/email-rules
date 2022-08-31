@@ -1,2 +1,4 @@
-mailrules.json
-rules.yaml
+*.pyc
+*.json
+*.yaml
+*.xml
