@@ -48,7 +48,11 @@ class GmailRule(BaseModel):
     shouldAlwaysMarkAsImportant: Union[bool, None]
     shouldNeverMarkAsImportant: Union[bool, None]
 
+    size: Union[float, None]
+
+    # One of s_ss (smaller) or s_sl (larger) is required
     sizeOperator: str = "s_sl"
+    # One of s_sb (bytes) s_skb (kilobytes) or s_smb (megabytes)
     sizeUnit: str = "s_smb"
 
     # These are the gmail properties that we can set on an entry.
@@ -64,6 +68,7 @@ class GmailRule(BaseModel):
         "shouldNeverSpam",
         "shouldAlwaysMarkAsImportant",
         "shouldNeverMarkAsImportant",
+        "size",
         "sizeOperator",
         "sizeUnit",
     ]
