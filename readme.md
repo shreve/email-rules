@@ -4,7 +4,7 @@ Email Rules
 I mean, email is ok. It could be better though.
 
 This project makes it easier to generate auto sorting rules for your Fastmail
-account. For example, 
+account. For example,
 
 ```yaml
 # rules.yaml
@@ -31,7 +31,20 @@ forwarding email.
 
 ## Usage
 
-1. Copy `rules.example.yaml` to `rules.yaml` or let the script do it for you
-2. Edit the rules as you see fit
-3. Run `ruby email.rb`
-4. Import to Fastmail at https://www.fastmail.com/settings/filters
+```
+$ python -m rules -h
+usage: __main__.py [-h] [--from {common,gmail,fastmail}] --to {common,gmail,fastmail} {convert} filename
+
+Common email filtering rules
+
+positional arguments:
+  {convert}             Command to run
+  filename              The filename to convert
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --from {common,gmail,fastmail}
+                        The source ruleset type
+  --to {common,gmail,fastmail}
+                        The destination ruleset type
+```
