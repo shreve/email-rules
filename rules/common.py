@@ -33,7 +33,7 @@ class CommonRule(BaseModel):
     match: CommonMatch
     folder: Union[str, None]
     label: Union[str, None]
-    redirect: Union[str, None]
+    redirect: Union[List[str], None]
     mark_read: Union[bool, None]
     notify: Union[bool, None]
     archive: Union[bool, None]

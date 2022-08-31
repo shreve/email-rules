@@ -4,24 +4,39 @@ Email Rules
 I mean, email is ok. It could be better though.
 
 This project makes it easier to generate auto sorting rules for your Fastmail
-account. For example,
+account. Here's the schema for a common ruleset:
 
 ```yaml
 # rules.yaml
-- mailbox: Mailbox Name
-  mark_read: false
+- name: Mostly useless name for this rule
+
+  # Where should this message go?
+  folder: Folder
+  label: Label
+  redirect:
+    - redirect@example.com
+
+  # What should happen to this message?
+  mark_read: true
+  archive: true
   notify: true
+
+  # Which messages should this apply to?
   match:
     to:
       - me@example.com
     from:
-      - Marketer
+      - shipments@example.com
     subject:
       - Order received
     body:
       - Track package
     headers:
       - List-Id
+    list:
+      - listserve.email.marketing.example.com
+    fromin:
+      - contacts
 ```
 
 `rules.example.yaml` is full of examples that I think would work well for most
